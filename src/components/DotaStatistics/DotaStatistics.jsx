@@ -7,7 +7,7 @@ const DotaStatistics = () => {
     const [kill, setkill] = useState(0)
     const [death, setdeath] = useState(0)
     const [assist, setassist] = useState(0)
-    const [startMmr, setStartmmr] = useState('...')
+    const [initialMmr, setinitialmmr] = useState('...')
     const [mmr, setmmr] = useState('...')
     const [win, setWin] = useState(0)
     const [totalKill, settotalKill] = useState(0)
@@ -16,14 +16,14 @@ const DotaStatistics = () => {
 
 
     const firstMmr = (firstValue) => {
-        setStartmmr(firstValue)
+        setinitialmmr(firstValue)
         setmmr(firstValue)
     }
 
 
     return (
         <>
-            <FirstStatistics startMmr={startMmr} mmrNow={mmr} />
+            <FirstStatistics startMmr={initialMmr} mmrNow={mmr} />
             <EnterMmr firstValue={firstMmr} mmrNow={setmmr} />
             <ChooseHero />
         </>

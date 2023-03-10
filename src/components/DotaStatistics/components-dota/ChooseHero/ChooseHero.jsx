@@ -1,12 +1,11 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import Select from 'react-select'
 import { getHeroes } from '../FetchHeroes'
-import { useState, useEffect } from 'react'
+
 
 const ChooseHero = () => {
-
     const [heroes, setHeroes] = useState([]);
-
 
     useEffect(() => {
         getHeroes().then(response => {
